@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://www.gabriela-gamez.com",
+  "homepage": "https://gamecsdev.github.io/gabriela-gamez-portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
