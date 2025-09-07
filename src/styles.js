@@ -512,7 +512,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #certification {
-    cursor: url('/More/Me/certification2.png') 16 16, auto;
+    cursor: url('src/assets/More/Me/certification2.png') 16 16, auto;
   }
 
   .timeline {
