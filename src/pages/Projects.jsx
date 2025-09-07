@@ -2,7 +2,26 @@ import React from 'react';
 import TypingEffect from '../components/TypingEffect';
 import MoreProjectView from '../components/ProjectView';
 import Award from '../components/Award';
+import SchoolRegistrationSystem from '../assets//Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem.gif';
+import SchoolRegistrationSystem2 from '../assets//Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem2.gif';
+import SchoolRegistrationSystem3 from '../assets//Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem3.gif';
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((key) => {
+    images[key.replace('./', '')] = r(key);
+  });
+  return images;
+}
 
+const images2DMathematicalVisualization = importAll(require.context('../assets/Selected_Work/2DMathematicalVisualization/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const images3DTransportationSimulation = importAll(require.context('../assets/Selected_Work/3DTransportationSimulation/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesChatBot = importAll(require.context('../assets/Selected_Work/ChatBot/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesImageClassifier = importAll(require.context('../assets/Selected_Work/ImageClassifier/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesPoliticianImpact = importAll(require.context('../assets/Selected_Work/PoliticianImpact/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesRealEstateAdvisor = importAll(require.context('../assets/Selected_Work/RealEstateAdvisor/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesConnectVR = importAll(require.context('../assets/Projects/ConnectVR/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesTranslatort = importAll(require.context('../assets/Projects/Image-to-Image-Translator/', false, /\.(png|PNG|jpe?g|jpg')$/));
+const imagesInteractiveStockComparison = importAll(require.context('../assets/Projects/InteractiveStockComparison/', false, /\.(png|PNG|jpe?g|jpg')$/));
 export default function Projects () {
 
   return (
@@ -27,10 +46,10 @@ export default function Projects () {
               location ='UC Irvine Division of Continuing Education - Irvine, CA'
               date ='(3/25-5/25)'
               imageList={[
-                { type: 'image', src: '/Selected_Work/ChatBot/chatbot.PNG', caption: 'Most Frequent Trigrams Symptoms' },
-                { type: 'image', src: '/Selected_Work/ChatBot/chatbot2.PNG', caption: 'Wordcloud Graph ' },
-                { type: 'image', src: '/Selected_Work/ChatBot/chatbot3.PNG', caption: 'User describe symptoms ' },
-                { type: 'image', src: '/Selected_Work/ChatBot/chatbot4.PNG' , caption: 'Chatbot Respond ' }
+                { type: 'image', src: imagesChatBot['chatbot.PNG'], caption: 'Most Frequent Trigrams Symptoms' },
+                { type: 'image', src: imagesChatBot['chatbot2.PNG'], caption: 'Wordcloud Graph ' },
+                { type: 'image', src: imagesChatBot['chatbot3.PNG'], caption: 'User describe symptoms ' },
+                { type: 'image', src: imagesChatBot['chatbot4.PNG'] , caption: 'Chatbot Respond ' }
               ]}
               languageTags={['Python', 'NLK', 'Scikit-Learn']}
               toolTags={['Google Colab']}
@@ -47,13 +66,13 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(1/23-5/23)'
               imageList={[
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/AFHQ_10_epochs.png'},
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/AFHQ_20_epochs.PNG' },
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/AFHQ_30_epochs.PNG'},
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/CIFAR-10_10_epochs.PNG' },
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/CIFAR-10_50_epochs.PNG' },
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/CIFAR-10_150_epochs.PNG'},
-                { type: 'image', src: '/Projects/Image-to-Image-Translator/tensorboard.PNG' }
+                { type: 'image', src: imagesTranslatort['AFHQ_10_epochs.png']},
+                { type: 'image', src: imagesTranslatort['AFHQ_20_epochs.png'] },
+                { type: 'image', src: imagesTranslatort['AFHQ_30_epochs.png']},
+                { type: 'image', src: imagesTranslatort['CIFAR-10_10_epochs.png'] },
+                { type: 'image', src: imagesTranslatort['CIFAR-10_50_epochs.png'] },
+                { type: 'image', src: imagesTranslatort['CIFAR-10_150_epochs.png']},
+                { type: 'image', src: imagesTranslatort['tensorboard.png'] }
               ]}
               languageTags={['Python', 'Tensorflow', 'Tensorboard', 'Numpy', 'Matplotlib', 'Random', 'Glob']}
               toolTags={['Google Colab','CIFAR 10','AFHQ datasets']}
@@ -72,10 +91,10 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(1/23-5/23)'
               imageList={[
-                { type: 'image', src: '/Selected_Work/ImageClassifier/imageClassifier2.PNG'},
-                { type: 'image', src: '/Selected_Work/ImageClassifier/imageClassifier3.PNG'},
-                { type: 'image', src: '/Selected_Work/ImageClassifier/imageClassifier.PNG' },
-                { type: 'image', src: '/Selected_Work/ImageClassifier/imageClassifier.PNG'}
+                { type: 'image', src: imagesImageClassifier['imageClassifier2.PNG']},
+                { type: 'image', src: imagesImageClassifier['imageClassifier3.PNG']},
+                { type: 'image', src: imagesImageClassifier['imageClassifier.PNG'] },
+                { type: 'image', src: imagesImageClassifier['imageClassifier.PNG']}
               ]}
               languageTags={['Python', 'Tensorflow', 'Keras', 'Pandas', 'Scikit-Learn', 'Numpy', 'Matplotlib', 'Random']}
               toolTags={['Google Colab','CIFAR 10 ', 'CIFAR 100','Canva']}
@@ -95,12 +114,12 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(1/23-5/23)'
               imageList={[
-                { type: 'image', src: '/Projects/InteractiveStockComparison/dashboard.PNG' },
-                { type: 'image', src: '/Projects/InteractiveStockComparison/barchart.PNG'},
-                { type: 'image', src: '/Projects/InteractiveStockComparison/linechart.PNG' },
-                { type: 'image', src: '/Projects/InteractiveStockComparison/scatterplot.PNG'},
-                { type: 'image', src: '/Projects/InteractiveStockComparison/select_options.PNG' },
-                { type: 'image', src: '/Projects/InteractiveStockComparison/info_term.PNG'},
+                { type: 'image', src: imagesInteractiveStockComparison['dashboard.PNG'] },
+                { type: 'image', src: imagesInteractiveStockComparison['barchart.png']},
+                { type: 'image', src: imagesInteractiveStockComparison['linechart.png'] },
+                { type: 'image', src: imagesInteractiveStockComparison['scatterplot.png']},
+                { type: 'image', src: imagesInteractiveStockComparison['select_options.png'] },
+                { type: 'image', src: imagesInteractiveStockComparison['info_term.png']},
                 ]}
               languageTags={['JavaScript (D3.js)', 'HTML']}
               toolTags={['Observable']}
@@ -120,12 +139,12 @@ export default function Projects () {
               date ='(9/22-12/22)'
               imageList={[
                 { type: 'tableau', src: 'https://public.tableau.com/shared/99S3NXQ9C?:display_count=n&:origin=viz_share_link', caption: 'Live Tableau Dashboard'},
-                { type: 'image', src: '/Selected_Work/RealEstateAdvisor/real-estate-advisor2.PNG'},
-                { type: 'image', src: '/Selected_Work/RealEstateAdvisor/real-estate-advisor3.PNG', caption: 'Which State has the most Wilfires Occurrences since 1908?' },
-                { type: 'image', src: '/Selected_Work/RealEstateAdvisor/real-estate-advisor4.PNG', caption: 'Which State has the most Hurricane Occurances since 1980? ' },
-                { type: 'image', src: '/Selected_Work/RealEstateAdvisor/real-estate-advisor5.PNG' , caption: 'Which State has the most Tornados Occurrences since 1950?' },
-                { type: 'image', src: '/Selected_Work/RealEstateAdvisor/real-estate-advisor7.PNG' , caption: 'Which State has the most Earthquakes Occurrences since 1906?' }
-              ]}
+                { type: 'image', src: imagesRealEstateAdvisor['real-estate-advisor2.PNG']},
+                { type: 'image', src: imagesRealEstateAdvisor['real-estate-advisor3.PNG'], caption: 'Which State has the most Wilfires Occurrences since 1908?' },
+                { type: 'image', src: imagesRealEstateAdvisor['real-estate-advisor4.PNG'], caption: 'Which State has the most Hurricane Occurances since 1980? ' },
+                { type: 'image', src: imagesRealEstateAdvisor['real-estate-advisor5.PNG'] , caption: 'Which State has the most Tornados Occurrences since 1950?' },// No caption
+                { type: 'image', src: imagesRealEstateAdvisor['real-estate-advisor7.PNG'] , caption: 'Which State has the most Earthquakes Occurrences since 1906?' }// No caption
+                  ]}
               languageTags={['Python', 'Pandas', 'Numpy', 'Reverse geocoder', 'Scikit-Learn', 'Matplotlib', 'Plotly']}
               toolTags={['Google Colab','Tableau']}
               onLearnMore={() => window.open('https://colab.research.google.com/drive/1hZwPnTlGde8bMfeoaNwO7_UJvFQwKA9G', '_blank')}
@@ -145,10 +164,10 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(9/21-4/22)' 
               imageList={[
-                { type: 'image', src: '/Selected_Work/PoliticianImpact/Constituent_User_and_Multiple_Representative_Comparison.PNG', caption: 'Constituent User and Multiple Representative Comparison' },
-                { type: 'image', src: '/Selected_Work/PoliticianImpact/PoliticanImpact.PNG'},
-                { type: 'image', src: '/Selected_Work/PoliticianImpact/Representative_Service_Scores.PNG', caption: 'Representative Service Scores ' },
-                { type: 'image', src: '/Selected_Work/PoliticianImpact/Representative_User_and_Multiple_Representative_Comparison.PNG' , caption: 'Representative User and Multiple Representative Comparison' }
+                { type: 'image', src: imagesPoliticianImpact['Constituent_User_and_Multiple_Representative_Comparison.png'], caption: 'Constituent User and Multiple Representative Comparison' },
+                { type: 'image', src: imagesPoliticianImpact['PoliticanImpact.PNG']},
+                { type: 'image', src: imagesPoliticianImpact['Representative_Service_Scores.png'], caption: 'Representative Service Scores ' },
+                { type: 'image', src: imagesPoliticianImpact['Representative_User_and_Multiple_Representative_Comparison.PNG'] , caption: 'Representative User and Multiple Representative Comparison' }// No caption
               ]}
               languageTags={['Python', 'Django', 'SQL', 'HTML', 'CSS', 'JSON', 'JQuery', 'JavaScript']}
               toolTags={['SQLite', 'Visual Studio Code', 'GitHub', 'Docker']}
@@ -169,10 +188,10 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(10/21-12/21)'
               imageList={[
-                { type: 'image', src: '/Selected_Work/3DTransportationSimulation/3DTransportationSimulation.PNG',caption: "Driver's third-person camera" },
-                { type: 'image', src: '/Selected_Work/3DTransportationSimulation/3DTransportationSimulation2.PNG',caption: 'Top view of the four-way intersection is controlled by a traffic signal ' },
-                { type: 'image', src: '/Selected_Work/3DTransportationSimulation/3DTransportationSimulation3.PNG' ,caption:"Police's third-person camera"},
-                ]}
+                { type: 'image', src: images3DTransportationSimulation['3DTransportationSimulation.PNG'],caption: "Driver's third-person camera " },
+                { type: 'image', src: images3DTransportationSimulation['3DTransportationSimulation2.PNG'],caption: 'Top view of the four-way intersection is controlled by a traffic signal ' },
+                { type: 'image', src: images3DTransportationSimulation['3DTransportationSimulation3.PNG'] ,caption:"Police's third-person camera"},
+              ]}
               languageTags={['C++ / OpenGL' ]}
               toolTags={['Microsoft Visual Studio','Maya 2022', 'GIMP 2']}
               decription= {[
@@ -191,9 +210,9 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(9/21-10/21)'
               imageList={[
-                { type: 'image', src: '/Selected_Work/2DMathematicalVisualization/P1_2Dimages.PNG' },
-                { type: 'image', src: '/Selected_Work/2DMathematicalVisualization/P1.PNG'}, 
-                ]}
+                { type: 'image', src: images2DMathematicalVisualization['P1_2Dimages.PNG'] },
+                { type: 'image', src: images2DMathematicalVisualization['P1.PNG']}, 
+              ]}
               languageTags={['C++ / OpenGL' ]}
               toolTags={['Microsoft Visual Studio']}
               decription= {[
@@ -212,9 +231,9 @@ export default function Projects () {
               location ='Old Dominion University - Norfolk, VA' 
               date ='(1/21-4/21)'
               imageList={[
-                { type: 'image', src: '/Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem.gif' },
-                { type: 'image', src: '/Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem3.gif'},
-                { type: 'image', src: '/Selected_Work/SchoolRegistrationSystem/SchoolRegistrationSystem2.gif' },
+                { type: 'image', src: SchoolRegistrationSystem },
+                { type: 'image', src:SchoolRegistrationSystem3},
+                { type: 'image', src: SchoolRegistrationSystem2},
               ]}
               languageTags={['JavaScript', 'SQL', 'HTML', 'CSS', 'PHP']}
               toolTags={['MySQL','Notepad++', 'VIM', 'GitHub']}
@@ -235,8 +254,8 @@ export default function Projects () {
               location ='TechTogether Seattle Hackathon' 
               date ='(1/22- 1/24/21)' 
               imageList={[
-                { type: 'image', src: '/Projects/ConnectVR/ConnectVR.PNG' },
-                { type: 'image', src: '/Projects/ConnectVR/ConnectVR2.PNG'},
+                { type: 'image', src: imagesConnectVR['ConnectVR.PNG'] },
+                { type: 'image', src: imagesConnectVR['ConnectVR2.PNG']},
                 ]}
                 
               languageTags={['C#', 'CSS','HTML']}

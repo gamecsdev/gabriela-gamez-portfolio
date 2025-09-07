@@ -1,5 +1,18 @@
 import tapeImg from '../assets/leaves2.png';
+import coffeeGif from '../assets/More/Me/coffee.gif';
+import lightGif from '../assets/More/Me/lightmode.gif';
+import darkGif from '../assets/More/Me/darkmode2.gif';
 import TypingEffect from '../components/TypingEffect';
+
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((key) => {
+    images[key.replace('./', '')] = r(key);
+  });
+  return images;
+}
+
+const images = importAll(require.context('../assets/More/Me', false, /\.(png|PNG|jpe?g|jpg')$/));
 
 const Tape = ({ position, image = tapeImg }) => (
   <div className={`tape ${position}`} 
@@ -28,13 +41,13 @@ const CollagePhoto = ({ src, alt, rotationClass, borderColor = '#ffffff', backgr
 export default function AboutMe({ darkMode }) {
   console.log('darkMode in AboutMe:', darkMode);
 
-  const images = [
-    { src: '/More/Me/Gradpic.PNG', alt: 'Memory 1', rotation: 'rotate-center'},
-    { darkSrc: '/More/Me/darkmode2.gif', lightSrc: '/More/Me/lightmode.gif', alt: 'Memory 2', rotation: 'rotate-left'},
-    { src: '/More/Me/coffee.gif', alt: 'Memory 3', rotation: 'rotate-right'},
-    { src: '/More/Me/junior-leader.jpg', alt: 'Memory 4', rotation: 'rotate-left'},
-    { src: '/More/Me/StateCompetion.PNG', alt: 'Memory 5', rotation: 'rotate-center'},
-    { src: '/More/Me/competion.jpg', alt: 'Memory 6', rotation: 'rotate-right'}
+  const Collageimages = [
+    { src: images['Gradpic.PNG'], alt: 'Memory 1', rotation: 'rotate-center' },
+    { darkSrc: darkGif, lightSrc: lightGif, alt: 'Memory 2', rotation: 'rotate-left'},
+    { src: coffeeGif, alt: 'Memory 3', rotation: 'rotate-right'},
+    { src: images['junior-leader.jpg'], alt: 'Memory 4', rotation: 'rotate-left'},
+    { src: images['StateCompetion.PNG'], alt: 'Memory 5', rotation: 'rotate-center'},
+    { src: images['competion.jpg'], alt: 'Memory 6', rotation: 'rotate-right'}
   ];
 
   const lightGradients = [
@@ -107,10 +120,10 @@ export default function AboutMe({ darkMode }) {
           <div className='photo-section'>
             <Tape position='top-left' />
             <Tape position='top-right' />
-            <img src='More/Me/me.jpg' alt='Self' className='polaroid-photo' />
+            <img src={images['me.jpg']} alt='Self' className='polaroid-photo' />
           </div>
           </div>
-          {images.map((img, index) => {
+          {Collageimages.map((img, index) => {
             return (
               <CollagePhoto
                 key={index}

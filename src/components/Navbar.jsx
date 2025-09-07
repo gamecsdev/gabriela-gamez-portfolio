@@ -4,7 +4,9 @@ import ToggleMode from './ToggleMode';
 
 export default function Navbar ({ darkMode, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const logoSrc = darkMode ? '/dark-logo.png':'/light-logo.png';
+  const logoSrc = darkMode 
+    ?`${process.env.PUBLIC_URL}/dark-logo.png`
+    :`${process.env.PUBLIC_URL}/light-logo.png`;
   const handleToggle = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 

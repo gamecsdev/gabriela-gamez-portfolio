@@ -4,8 +4,21 @@ import { GiDiploma } from 'react-icons/gi';
 import { PiCertificateFill } from 'react-icons/pi';
 import { MdOutlineSportsMartialArts } from 'react-icons/md';
 import { AiFillMedicineBox } from 'react-icons/ai';
+
+import WorkDA from '../assets/More/Me/WorkDA.PNG';
+import GrandImages from '../assets/More/Me/GrandImages_XLarge.jpg';
+import BlackBelt from '../assets/More/Me/BlackBelt.png';
 import TypingEffect from '../components/TypingEffect';
 
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((key) => {
+    images[key.replace('./', '')] = r(key);
+  });
+  return images;
+}
+
+const images = importAll(require.context('../assets/More/', false, /\.(png|PNG|jpe?g|jpg')$/));
 
 const data = [
   {
@@ -19,7 +32,7 @@ const data = [
       url: 'https://ce.uci.edu/programs/technology/machine-and-deep-learning'
     },
     color: 'blue',
-    image: '/More/UCI.png',
+    image: images['UCI.png'],
     icon: <PiCertificateFill />
   },
   {
@@ -33,7 +46,7 @@ const data = [
       url: 'https://www.odu.edu/academics/programs/masters/computer-science'
     },
     color: 'green',
-    image: '/More/Me/GrandImages_XLarge.jpg',
+    image: GrandImages,
     icon: <GiDiploma  />
   },
   {
@@ -47,7 +60,7 @@ const data = [
       url: 'https://www.odu.edu/computer-science/assessment'
     },
     color: 'green',
-    image: '/More/ODU.png',
+    image: images['ODU.png'],
     icon: <GiDiploma  />
   },
     {
@@ -60,7 +73,7 @@ const data = [
       url: 'https://www.nvcc.edu/academics/programs/computer-science.html'
     },
     color: 'green',
-    image: '/More/NOVA.png',
+    image: images['NOVA.png'],
     icon: <GiDiploma  />
   },
   {
@@ -72,7 +85,7 @@ const data = [
       url: 'https://www.danb.org'
     },
     color: 'green',
-    image: '/More/Me/WorkDA.PNG',
+    image: WorkDA,
     icon: <AiFillMedicineBox />
   },
   {
@@ -84,7 +97,7 @@ const data = [
       url: 'https://www.worldtaekwondo.org/index.html'
     },
     color: 'green',
-    image: '/More/Me/BlackBelt.png',
+    image: BlackBelt,
     icon: <MdOutlineSportsMartialArts />
   }
 ];
