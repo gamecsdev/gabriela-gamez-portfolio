@@ -510,11 +510,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => (props.darkMode ? '#FFFFFF' : '#000000')};
     text-align: center;
   }
-
-  #certification {
-    cursor: url('/More/Me/certification2.png') 16 16, auto;
-  }
-
+    
   .timeline {
     position: relative;
     border-left: 8px dashed #999; 
