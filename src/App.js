@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from './styles'; 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,6 +12,7 @@ import Certification from './pages/Certification';
 export default function App() {
   const [darkMode, setDarkMode] = useState(true); // Starts in dark mode
   const toggleTheme = () => setDarkMode(prev => !prev);
+  
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);   
     // change the favicon based on dark mode
