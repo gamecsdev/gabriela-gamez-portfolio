@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gabriela-gamez-portfolio/static/css/main.3bf91704.css",
-    "main.js": "/gabriela-gamez-portfolio/static/js/main.cd1daaae.js",
+    "main.js": "/gabriela-gamez-portfolio/static/js/main.a787ad8c.js",
     "static/js/453.f7cfb1b6.chunk.js": "/gabriela-gamez-portfolio/static/js/453.f7cfb1b6.chunk.js",
     "static/media/SchoolRegistrationSystem.gif": "/gabriela-gamez-portfolio/static/media/SchoolRegistrationSystem.932e1f072e46a3741282.gif",
     "static/media/SchoolRegistrationSystem2.gif": "/gabriela-gamez-portfolio/static/media/SchoolRegistrationSystem2.30d1f2fb9ca6cb4db3da.gif",
@@ -71,11 +71,11 @@
     "static/media/fa-v4compatibility.woff2": "/gabriela-gamez-portfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/gabriela-gamez-portfolio/index.html",
     "main.3bf91704.css.map": "/gabriela-gamez-portfolio/static/css/main.3bf91704.css.map",
-    "main.cd1daaae.js.map": "/gabriela-gamez-portfolio/static/js/main.cd1daaae.js.map",
+    "main.a787ad8c.js.map": "/gabriela-gamez-portfolio/static/js/main.a787ad8c.js.map",
     "453.f7cfb1b6.chunk.js.map": "/gabriela-gamez-portfolio/static/js/453.f7cfb1b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3bf91704.css",
-    "static/js/main.cd1daaae.js"
+    "static/js/main.a787ad8c.js"
   ]
 }
