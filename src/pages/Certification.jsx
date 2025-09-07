@@ -4,7 +4,7 @@ import { GiDiploma } from 'react-icons/gi';
 import { PiCertificateFill } from 'react-icons/pi';
 import { MdOutlineSportsMartialArts } from 'react-icons/md';
 import { AiFillMedicineBox } from 'react-icons/ai';
-
+import './certification.css';
 import WorkDA from '../assets/More/Me/WorkDA.PNG';
 import GrandImages from '../assets/More/Me/GrandImages_XLarge.jpg';
 import BlackBelt from '../assets/More/Me/BlackBelt.png';

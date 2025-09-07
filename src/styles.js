@@ -511,10 +511,6 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
 
-  #certification {
-    cursor: url('src/assets/More/Me/certification2.png') 16 16, auto;
-  }
-
   .timeline {
     position: relative;
     border-left: 8px dashed #999; 
